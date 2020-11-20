@@ -160,4 +160,9 @@
 - eladmin-logging 系统日志模块
 - eladmin-tools 系统第三方工具模块
 - eladmin-generator 系统代码生成模块
+
+#### 特别感谢eladmin源码支持
+|     |   后端源码  |   前端源码  |
+|---  |--- | --- |
+|  github   |  https://github.com/elunez/eladmin   |  https://github.com/elunez/eladmin-web   |
     
