@@ -6,7 +6,7 @@ spring:
       driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
       url: jdbc:log4jdbc:mysql://localhost:3306/aiym?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
       username: root
-      password: tanzs0916
+      password: sasa
 
       # 初始化配置
       initial-size: 3
@@ -47,9 +47,9 @@ spring:
     redis:
       #数据库索引
       database: 1
-      host: 49.235.255.179
+      host: //redis主机
       port: 6379
-      password: lQrVBDbu9rR7T3oY
+      password: //redis密码
       #连接超时时间
       timeout: 5000
 
