@@ -46,4 +46,6 @@ public @interface Limit {
     // 限制类型
     LimitType limitType() default LimitType.CUSTOMER;
 
+    String msg() default "当前活动火爆,请稍后重试！";
+
 }

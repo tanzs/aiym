@@ -74,10 +74,10 @@ public class LimitAspect {
         RedisScript<Number> redisScript = new DefaultRedisScript<>(luaScript, Number.class);
         Number count = redisTemplate.execute(redisScript, keys, limit.count(), limit.period());
         if (null != count && count.intValue() <= limit.count()) {
-            logger.info("第{}次访问key为 {}，描述为 [{}] 的接口", count, keys, limit.name());
+            logger.info("第{}次访问key为 {}，ip为{},描述为 [{}] 的接口", count, keys,StringUtils.getIp(request), limit.name());
             return joinPoint.proceed();
         } else {
-            throw new BadRequestException("访问次数受限制");
+            throw new BadRequestException(limit.msg());
         }
     }
 
