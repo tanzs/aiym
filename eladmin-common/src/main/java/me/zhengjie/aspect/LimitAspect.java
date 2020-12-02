@@ -35,7 +35,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 
 /**
- * @author /
+ * @author /程序员XiaoQ
  */
 @Aspect
 @Component
@@ -83,6 +83,13 @@ public class LimitAspect {
 
     /**
      * 限流脚本
+     * 定义一个局部变量c
+     * c等于redis取keys键的值
+     * 如果c>10次则返回c 结束
+     * 将键keys的值加1
+     * 如果c的值等于1
+     * 将当前key设置60秒过期
+     * 返回当前值
      */
     private String buildLuaScript() {
         return "local c" +
